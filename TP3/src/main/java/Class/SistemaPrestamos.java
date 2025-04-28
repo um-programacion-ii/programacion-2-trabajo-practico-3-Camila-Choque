@@ -17,20 +17,17 @@ public class SistemaPrestamos {
     private List<Prestamo> listaPrestamos = new ArrayList<>();
 
 
-    public void crearPrestamo(String isbn, Catalogo catalogo) {
+    public Prestamo crearPrestamo(String isbn, Catalogo catalogo) {
         Libro libro = catalogo.buscarLibroISBN(isbn);
-        if (libro == null) {
-            return;
-        }
-        if (libro.getEstado() != Estado.DISPONIBLE) {
-            return;
+        if (libro == null || libro.getEstado() != Estado.DISPONIBLE) {
+            return null;
         }
         Prestamo prestamo = new Prestamo(LocalDate.now(), libro);
-        listaPrestamos.add(prestamo);
         libro.setEstado(Estado.PRESTADO);
+        return prestamo;
     }
 
-    public void devolverPrestamo(String isbn, Catalogo catalogo) {
+    public void devolverLibro(String isbn, Catalogo catalogo) {
         Libro libro = catalogo.buscarLibroISBN(isbn);
         if (libro == null) {
             return;
