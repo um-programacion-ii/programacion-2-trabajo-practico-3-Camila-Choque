@@ -1,15 +1,19 @@
 package Class;
 
-import lombok.NoArgsConstructor;
 import lombok.ToString;
+import java.util.ArrayList;
 import java.util.List;
 
 
-@NoArgsConstructor
+
 @ToString
 public class Catalogo {
 
     private List <Libro> listaLibros;
+
+    public Catalogo() {
+        this.listaLibros = new ArrayList<>();  // Asegúrate de inicializar la lista aquí
+    }
 
     public void agregarLibro(Libro libro) {
         listaLibros.add(libro);
