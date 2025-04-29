@@ -39,7 +39,7 @@
    - Devolver libro.
    - Crear prestamo libro no disponible.
      
-  - Test Usuario:
+ - Test Usuario:
     - Registrar prestamo.
     - Registrar prestamo usuario no encontrado.
     - Registrar prestamo ISBN null.
