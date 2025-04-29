@@ -74,7 +74,7 @@
    ✏️ Durante el proceso de desarrollo se realizaron modificaciones tanto en las clases como en sus correspondientes pruebas
     con el objetivo de mejorar la claridad y cobertura funcional.
 
-## ✅ 4. Evidencia de que las pruebas pasan correctamente
+## ✅ 4- Evidencia de que las pruebas pasan correctamente
 ![Captura desde 2025-04-29 10-26-40](https://github.com/user-attachments/assets/272ff9b7-15ba-4fa1-9138-179899db38ba)
 ![Captura desde 2025-04-29 10-26-53](https://github.com/user-attachments/assets/1a464704-4542-4029-93ca-f460f190f262)
 
