@@ -42,4 +42,14 @@ public class TestPrestamo {
         assertEquals(Estado.DISPONIBLE, libro.getEstado());
         verify(catalogo).buscarLibroISBN("978-3-16-148410-0");
     }
+    @Test
+    void testCrearPrestamoLibroNoDisponible() {
+        Libro libro = new Libro("978-3-16-148410-0", "Clean Code", "Robert C. Martin");
+        libro.setEstado(Estado.PRESTADO);
+        when(catalogo.buscarLibroISBN("978-3-16-148410-0")).thenReturn(libro);
+        Prestamo prestamo = sistemaPrestamos.crearPrestamo("978-3-16-148410-0");
+        assertEquals(null, prestamo);
+        verify(catalogo).buscarLibroISBN("978-3-16-148410-0");
+    }
+
 }
