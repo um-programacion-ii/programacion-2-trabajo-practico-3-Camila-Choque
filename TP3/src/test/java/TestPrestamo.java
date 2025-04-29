@@ -27,7 +27,7 @@ public class TestPrestamo {
     void testcrearPrestamo() {
         Libro libro = new Libro("978-3-16-148410-0", "Clean Code", "Robert C. Martin");
         when(catalogo.buscarLibroISBN("978-3-16-148410-0")).thenReturn(libro);
-        Prestamo prestamo = sistemaPrestamos.crearPrestamo("978-3-16-148410-0",catalogo);
+        Prestamo prestamo = sistemaPrestamos.crearPrestamo("978-3-16-148410-0");
         assertNotNull(prestamo);
         verify(catalogo).buscarLibroISBN("978-3-16-148410-0");
         assertEquals(Estado.PRESTADO, libro.getEstado());

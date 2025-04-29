@@ -17,7 +17,7 @@ public class SistemaPrestamos {
     private List<Prestamo> listaPrestamos = new ArrayList<>();
 
 
-    public Prestamo crearPrestamo(String isbn, Catalogo catalogo) {
+    public Prestamo crearPrestamo(String isbn) {
         Libro libro = catalogo.buscarLibroISBN(isbn);
         if (libro == null || libro.getEstado() != Estado.DISPONIBLE) {
             return null;
