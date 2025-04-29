@@ -29,9 +29,10 @@ public class GestionUsuarios {
         return listaUsuarios;
     }
 
-    public boolean registrarPrestamo(String nombreUsuario, Prestamo prestamo) {
+    public boolean registrarPrestamo(String nombreUsuario, String isbn) {
         Usuario usuario = buscarUsuarioPorNombre(nombreUsuario);
         if (usuario != null) {
+            Prestamo prestamo = sistemaPrestamos.crearPrestamo(isbn);
             usuario.getHistorialPrestamos().add(prestamo);
             return true;
         }
