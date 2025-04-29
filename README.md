@@ -10,9 +10,75 @@
 - **Recomendación:** Se sugiere leer la consigna completa antes de comenzar con el desarrollo para tener una visión general del proyecto y planificar adecuadamente el trabajo.
 
 ## Identificación del Alumno
-- **Nombre:** [Nombre del Alumno]
-- **Apellido:** [Apellido del Alumno]
-- **Legajo:** [Número de Legajo]
+- **Nombre:** Camila
+- **Apellido:** Choque
+- **Legajo:** 62069
+
+# 📘 Documentación del Sistema
+## 🧱 1-Componentes principales
+- LIBRO: Es la clase que representa un libro con los atributos ISBN, titulo, autor y estado.
+- CATALOGO: Es una clase que permite agregar libros, buscar libros por ISBN y obtener todos los libros.
+- PRESTAMO: Es una clase que representa un prestamos con los atributos fecha y libro.
+- SISTEMA PRESTAMOS: Permite crear prestamos y devolver el libro.
+- USUARIO: Es una clase que representa un usuario y tiene los atributos historial prestamos y nombre.
+- GESTION USUARIO: Permite registrar un usuario, buscar usuario por nombre, obtener todos los usuarios y registrar prestamo.
+
+## ✅ 2-Pruebas
+
+- Test Catalogo:
+  - Buscar por ISBN.
+  - Buscar por ISBN fallida.
+  - Mostrar todos los libros.
+
+- Test Libro:
+   - Crear libro valido.
+   - Cambio estado
+     
+- Test Prestamo:
+   - Crear prestamo.
+   - Devolver libro.
+   - Crear prestamo libro no disponible.
+     
+  - Test Usuario:
+    - Registrar prestamo.
+    - Registrar prestamo usuario no encontrado.
+    - Registrar prestamo ISBN null.
+
+## 📈 3-Documentación de los cambios realizados
+
+   - ✔ Libro:
+      - Atributos: ISBN,titulo,autor y estado.
+      - Se inicializa en el estado DISPONIBLE.
+        
+   - ✔ Catalogo:
+      - Agregar libros: Mediate una lista.
+      - Buscar libro por ISBN: Utiliza ISBN.
+      - Obtener todos lo libros: Imprime la lista.
+
+   - ✔ Usuario:
+      - Atributos: Nombre y la lista "historial prestamos"
+        
+   - ✔ Gestion Usuario:
+     - Registrar usuario: Mediante una lista.
+     - Buscar usuario por nombre: Utiliza stream.
+     - Registrar prestamo:Utiliza el nombre del usuario y el ISBN.
+     - Obtener todos los usuarios: Imprime la lista.
+
+   -  ✔ Prestamo:
+      - Atributos: Fecha y libro.
+        
+   - ✔ Sistema Prestamos:
+      - Crear prestamo: Utiliza el ISBN
+      - Devolver libro: Utiliza el ISBN y el catalogo.
+        
+   ✏️ Durante el proceso de desarrollo se realizaron modificaciones tanto en las clases como en sus correspondientes pruebas
+    con el objetivo de mejorar la claridad y cobertura funcional.
+
+## ✅ 4. Evidencia de que las pruebas pasan correctamente
+![Captura desde 2025-04-29 10-26-40](https://github.com/user-attachments/assets/272ff9b7-15ba-4fa1-9138-179899db38ba)
+![Captura desde 2025-04-29 10-26-53](https://github.com/user-attachments/assets/1a464704-4542-4029-93ca-f460f190f262)
+
+
 
 ## Importante
 - La rama `main` está protegida y no se pueden hacer commits directos sobre ella
